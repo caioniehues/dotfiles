@@ -1,0 +1,45 @@
+# Sensitive credentials
+.credentials.json
+stats-cache.json
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Plans (personal/session-specific)
+plans/
+
+# OS artifacts
+.DS_Store
+**/.DS_Store
+
+# Session and history data
+history.jsonl
+session-env/
+shell-snapshots/
+file-history/
+
+# Debug and cache
+debug/
+tsc-cache/
+
+# IDE and plugin data
+ide/
+plugins/
+
+# Project-specific data
+projects/
+todos/
+
+# Telemetry and stats
+telemetry/
+statsig/
+
+# Browser data
+chrome/
+
+# Downloads
+downloads/
+
+# CCLine cache
+ccline/

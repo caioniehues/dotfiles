@@ -1,0 +1,55 @@
+{
+  "env": {},
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Edit",
+      "Skill",
+      "SlashCommand",
+      "Write",
+      "WebSearch"
+    ],
+    "defaultMode": "default",
+    "additionalDirectories": [
+      "/home/caio/.claude/",
+      "/home/caio/second-brain"
+    ]
+  },
+  "model": "opus",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/caio/.claude/hooks/skill-activation-prompt.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/caio/.claude/hooks/post-tool-use-tracker.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "ccline",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "explanatory-output-style@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
+  }
+}

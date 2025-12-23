@@ -1,0 +1,126 @@
+{
+  "version": "1.0",
+  "skills": {
+    "skill-developer": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": ["skill", "SKILL.md", "skill-rules", "auto-activation"],
+        "intentPatterns": [
+          "create.*skill",
+          "write.*skill",
+          "new.*skill",
+          "build.*skill"
+        ]
+      }
+    },
+    "create-agent-skills": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": ["agent skill", "skill template"],
+        "intentPatterns": ["create.*agent.*skill", "new.*agent.*skill"]
+      }
+    },
+    "create-hooks": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": [
+          "hook",
+          "UserPromptSubmit",
+          "PostToolUse",
+          "PreToolUse",
+          "Stop hook"
+        ],
+        "intentPatterns": [
+          "create.*hook",
+          "write.*hook",
+          "new.*hook",
+          "add.*hook"
+        ]
+      }
+    },
+    "create-meta-prompts": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "promptTriggers": {
+        "keywords": ["meta-prompt", "prompt pipeline", "claude-to-claude"],
+        "intentPatterns": ["create.*prompt", "write.*prompt", "chain.*prompt"]
+      }
+    },
+    "create-plans": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "promptTriggers": {
+        "keywords": ["project plan", "phase plan", "roadmap", "planning"],
+        "intentPatterns": ["create.*plan", "write.*plan", "new.*plan"]
+      }
+    },
+    "create-slash-commands": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": ["slash command", "command.md", "/command"],
+        "intentPatterns": ["create.*command", "new.*command", "add.*slash"]
+      }
+    },
+    "create-subagents": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": ["subagent", "Task tool", "agent.md", "specialized agent"],
+        "intentPatterns": [
+          "create.*agent",
+          "new.*agent",
+          "add.*agent",
+          "build.*agent"
+        ]
+      }
+    },
+    "debug-like-expert": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": [
+          "debug",
+          "investigate",
+          "root cause",
+          "troubleshoot",
+          "diagnose"
+        ],
+        "intentPatterns": [
+          "why.*not.*work",
+          "fix.*bug",
+          "find.*issue",
+          "trace.*error"
+        ]
+      }
+    },
+    "rg_history": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "low",
+      "promptTriggers": {
+        "keywords": [
+          "conversation history",
+          "previous message",
+          "earlier in session"
+        ],
+        "intentPatterns": [
+          "search.*history",
+          "find.*earlier",
+          "what.*said.*before"
+        ]
+      }
+    }
+  }
+}
